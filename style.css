@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Georgia, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
     background-image: url('images/bluebg.png');
@@ -115,8 +115,13 @@ footer {
     .home-grid {
         grid-template-columns: 1fr;
     }
+
+    .profile {
+        width: 80%;
+    }
    
 }
+
 
 
 
