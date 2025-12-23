@@ -65,6 +65,7 @@ section:hover {
 }
 
 .profile {
+    text-align: center;
     margin: 10px auto;
     display: flex;
     flex-direction: column;
@@ -111,11 +112,12 @@ footer {
 }
 
 @media (max-width: 880px) {
-    img {
-        width: 20px;
+    profile {
+        width: 50%;
     }
     .home-grid {
         grid-template-columns: 1fr;
     }
 }
+
 
