@@ -1,37 +1,40 @@
-
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
+/*For All Pages Designs*/
 
 body {
-    font-family: Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    background-image: url('images/bluebg.png');
-    background-size: cover; /* stretches to fit screen */
+    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/bluebg.jpg');
+    background-size: cover; 
     background-position: center;
-    background-attachment: fixed; /* parallax effect */
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 header {
-    background-color:  rgba(165, 220, 245, 0.635);
-    padding: 3px;
+    background: linear-gradient(45deg, rgba(88, 247, 255, 0.557), rgba(198, 166, 254, 0.616));
+    margin: 0;
+    padding: 2px;
     text-align: center;
     color: #000d84;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #01106b;
 }
 
 nav {
     text-align: center;
-    background-color:  #01106b;
-    padding: 10px;
+    background: linear-gradient(180deg,  rgb(27, 82, 146), #01106b);
+    padding: 8px;
     width: 100%;
 }
 
 nav a {
-    margin: 0 15px;
+    font-size: 15px;
+    margin: 0 25px;
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
@@ -42,20 +45,38 @@ a:hover {
 }
 
 main {
-    padding: 0%;
+    padding: 0px 20px 50px 20px;
     margin-bottom: 50px;
 }
 
 section {
     background: linear-gradient(45deg, rgba(88, 247, 255, 0.557), rgba(198, 166, 254, 0.616));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 1px;
+    margin: 15px auto;
     border-radius: 30px;
 }
 
 section:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/*For Home Page Designs*/
+.img-profile {
+     border-radius: 50%;
+     padding: 5px;
+     box-shadow: 0 0 20px rgba(88, 247, 255, 0.5);
 }
 
 .home-grid {
@@ -65,64 +86,217 @@ section:hover {
 }
 
 .profile {
-    text-align: center;
-    margin: 10px auto;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border-radius: 20%;
-    width: 20%;
+    width: 18%;
 }
 
-img {
-     border-radius: 50%;
-     padding: 5px;
-     box-shadow: 0 0 20px rgba(88, 247, 255, 0.5);
-}
 
 .motto {
-    margin: 10px auto;
-    margin-bottom: 30px;
-    background: linear-gradient(45deg, rgb(212, 236, 255), rgb(148, 214, 255));
-    width: 50%;
+    margin-bottom: 50px;
+    background: linear-gradient(45deg, rgb(168, 230, 255), rgb(242, 249, 255) );
+    width: 40%;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     background-color: rgb(159, 210, 255);
-    border: 2px solid rgb(3, 63, 95);
-    border-radius: 0 30% 30% 30%;
+    border: 2px solid rgb(15, 127, 187);
+    border-radius: 0 50% 50% 50%;
 }
 
 .biography, .facts {
-    padding: 10px;
+    padding: 0 10px 25px 10px;
     margin: 10px auto;
     width: 80%;
-    border: 1px solid white;
+    border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-footer {
-    background-color:#01106b;
-    text-align: center;
-    padding: 5px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    color: #ffffff;
+.facts li {
+    padding-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    font-size: 17px;
 }
 
+.biography p {
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 17px;
+}
+
+
+
+/*For Skills Page Designs*/
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "tech soft" "hobby hobby";
+}
+
+.tech {
+    padding: 10px 10px 25px 10px;
+    margin-top: 30px;
+    width: 80%;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    grid-area: tech;
+}
+
+.soft {
+    padding: 10px 10px 25px 10px;
+    margin-top: 30px;
+    width: 80%;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    grid-area: soft;
+}
+
+.softie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.softie span {
+    font-size: 30px;    
+    background: linear-gradient(45deg, rgb(70, 224, 255), #8286ff, rgb(46, 133, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hobby {
+    padding: 10px 10px 25px 10px;
+    margin: 5px auto;
+    width: 70%;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    grid-area: hobby;
+}
+
+.hobby li {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+/*For Bar and Bar Animations in Skills. Tutorial I used: https://foolishdeveloper.com/animated-skills-bar-html-css-for-beginners/*/
+
+.details{
+    width: 95%;
+    display: flex;  
+    justify-content: space-between;
+    margin: 10px;
+    font-weight: bold;
+    
+}
+
+.bar{
+    position: relative;
+    border: solid 2px #01106b;
+    border-radius: 20px;
+    margin: 10px 20px 20px 20px;
+}
+
+.bar div{
+    position: relative;
+    width: 0;
+    height: 7px;
+    border-radius: 10px;
+    padding: 7px;
+    background: linear-gradient(45deg, rgba(101, 229, 255, 0.881), #a9acffe1, rgb(86, 156, 255));
+}
+
+
+#html-bar{
+    animation: html-fill 3s forwards;
+}
+
+@keyframes html-fill{
+    100%{
+        width: 81%;
+    }
+}
+
+#css-bar{
+    animation: css-fill 3s forwards;
+}
+
+@keyframes css-fill{
+    100%{
+        width: 77%;
+    }
+}
+
+#js-bar{
+    animation: js-fill 3s forwards;
+}
+
+@keyframes js-fill{
+    100%{
+        width: 58%;
+    }
+}
+
+#cpp-bar{
+    animation: cpp-fill 3s forwards;
+}
+
+@keyframes cpp-fill{
+    100%{
+        width: 63%;
+    }
+}
+
+
+#digital-bar{
+    animation: digital-fill 3s forwards;
+}
+
+@keyframes digital-fill{
+    100%{
+        width: 78%;
+    }
+}
+
+#video-bar{
+    animation: video-fill 3s forwards;
+}
+
+@keyframes video-fill{
+    100%{
+        width: 57%;
+    }
+}
+
+#writing-bar{
+    animation: writing-fill 3s forwards;
+}
+
+@keyframes writing-fill{
+    100%{
+        width: 68%;
+    }
+}
 @media (max-width: 880px) {
     .home-grid {
         grid-template-columns: 1fr;
     }
 
-    .profile {
-        width: 80%;
+    .skill-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "tech" 
+            "soft" 
+            "hobby";
     }
-   
 }
-
-
-
 
 
