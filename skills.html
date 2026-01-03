@@ -3,19 +3,24 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Skills page</title>
+        <title>Skills Page</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <!--Navigation Header-->
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="skills.html">Skills</a>
-            <a href="lesson.html">Lesson Gallery</a>
-            <a href="contact.html">Contact Me</a>
+       <nav id="navbar">
+            <ul>
+                <li><a href="#" class="left">Portfolio.</a></li>
+                <li><a href="home.html" class="right">Home</a></li>
+                <li><a href="skills.html" class="active right">Skills</a></li>
+                <li><a href="lesson.html" class="right">Lesson Gallery</a></li>
+                <li><a href="contact.html" class="right">Contact Me</a></li>
+                <button id="dark-toggle" onclick="DarkMode()">Dark Mode</button>
+            </ul>
         </nav>
 
+        <div class="space-down animate">
         <!--Header Section-->
         <header>
         <h1>My Skills</h1>
@@ -101,11 +106,11 @@
             <section class="soft">
                 <h2>Soft Skills</h2>
                 <div class="softie">
-                    <h4>Multitasking<br><span>⭐⭐⭐⭐⭐</span></h4>
-                    <h4>Time Management<br><span>⭐⭐⭐⭐</span></h4>
-                    <h4>Communication Skills<br><span>⭐⭐⭐</span></h4>
-                    <h4>Group Collaboration<br><span>⭐⭐⭐⭐</span></h4>
-                    <h4>Fast Learner<br><span>⭐⭐⭐⭐⭐</span></h4>
+                    <h4>Multitasking<br><span>⭐⭐⭐⭐⭐⭐⭐⭐</span></h4>
+                    <h4>Time Management<br><span>⭐⭐⭐⭐⭐⭐⭐</span></h4>
+                    <h4>Communication Skills<br><span>⭐⭐⭐⭐⭐⭐</span></h4>
+                    <h4>Group Collaboration<br><span>⭐⭐⭐⭐⭐⭐⭐</span></h4>
+                    <h4>Fast Learner<br><span>⭐⭐⭐⭐⭐⭐⭐⭐</span></h4>
                 </div>
             </section>
 
@@ -122,11 +127,13 @@
             </section>
 
         </main>
+        </div>
 
         <!--Footer Section-->
         <footer>
             <p>&copy; 2026 Liane Raizel N. Roga Portfolio</p>
         </footer>
 
+    <script src="script.js"></script>
     </body>
 </html>
