@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <!--Navigation Header-->
+        <nav id="navbar">
+            
+            <ul>
+                <li><a href="#" class="left">Portfolio.</a></li>
+                <li><a href="home.html" class="right">Home</a></li>
+                <li><a href="skills.html" class="right">Skills</a></li>
+                <li><a href="lesson.html" class="right">Lesson Gallery</a></li>
+                <li><a href="contact.html" class="active right">Contact Me</a></li>
+                <button id="dark-toggle" onclick="DarkMode()">Dark Mode</button>
+            </ul>
+        </nav>
+
+        <div class="space-down animate">
+        <!--Header Section-->
+        <header>
+        <h1>Contact Me</h1>
+        </header>
+
+        <!--Main Content Area-->
+        <main>
+            <div class="contacts-grid">
+                <section class="contact-info">
+                    <h2>📫Get In Touch</h2>
+                    <p>If you have any questions, collaboration ideas, or just want to say hello, feel free to reach out to me through the following contact details:</p>
+                    
+                    <ul>
+                    <li><i class="fa-regular fa-address-book"></i>lianeraizel.roga@gmail.com</li>
+                    <li><i class="fa-solid fa-phone"></i>09279552026</li>
+                    <li><i class="fa-solid fa-house"></i>Mariveles, Bataan, Philippines</li>
+                    </ul>
+
+                    <div class="icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook-messenger"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-telegram"></i>
+                    </div>
+                </section>
+
+                <section class="contact-form">
+                    <h2>📝Contact Form</h2>
+                    <form onsubmit="return validateForm()">
+                        <label>Your Name:</label><br>
+                        <p class="nameAlert"></p>
+                        <input type="text" id="username" placeholder="Example: Jose Rizal"><br><br>
+                        
+                        
+                        <label>Your Email:</label><br>
+                        <p class="emailAlert"></p>
+                        <input type="email" id="email" placeholder="Example: rizal@gmail.com"><br><br>
+
+                        
+                        <label>Your Message:</label><br>
+                        <p class="messageAlert"></p>
+                        <textarea id="message" rows="4" placeholder="Example: 'Consummatum est!'"></textarea><br><br>
+                       
+
+                        <input class="send" type="submit" value="Send Message">
+                    </form>
+                </section>
+            </div>
+        </main>
+        </div>
+
+        <!--Footer Section-->
+        <footer>
+            <p>&copy; 2026 Liane Raizel N. Roga Portfolio</p>
+        </footer>
+
+    <script src="https://kit.fontawesome.com/3f6fae238f.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
