@@ -602,6 +602,10 @@ input:hover, textarea:hover{
         width: fit-content;
     }
 
+    .facts li {
+        margin-left: 2px;
+    }
+
     .home-grid {
         grid-template-columns: 1fr;
     }
@@ -646,3 +650,4 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
+
