@@ -1,7 +1,41 @@
 /*For All Pages Designs*/
 
+.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dark-body {
+    background-image: url('images/blackbg.png');
+}
+
+.dark-nav-footer {
+    background: linear-gradient(180deg, #000000, #434343);
+}
+
+.dark-section {
+    background: linear-gradient(45deg, rgba(24, 24, 24, 0.8), rgba(80, 80, 80, 0.8));
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.349);
+    color: #ffffff;
+    background-color: #181818;
+}
+
+.light-text {
+    color: #ffffff;
+}
+
 body {
-    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('images/bluebg.jpg');
@@ -11,10 +45,15 @@ body {
     background-repeat: no-repeat;
 }
 
+.space-down {
+    margin-top: 45px;
+    margin-bottom: 80px; 
+}
+
 header {
     background: linear-gradient(45deg, rgba(88, 247, 255, 0.557), rgba(198, 166, 254, 0.616));
     margin: 0;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
     color: #000d84;
     width: 100%;
@@ -25,28 +64,56 @@ h2 {
     color: #01106b;
 }
 
+/*Navigation Bar Responsive. Tutorial used: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
 nav {
-    text-align: center;
-    background: linear-gradient(180deg,  rgb(27, 82, 146), #01106b);
-    padding: 8px;
+    z-index: 1; /*To ensure the navbar is on top of other content */
+    position: fixed;
+    transition: top 0.3s;
+    top: 0; 
     width: 100%;
+    background: linear-gradient(180deg,  rgb(27, 82, 146), #01106b);
 }
 
-nav a {
-    font-size: 15px;
-    margin: 0 25px;
+nav ul {
+  overflow: hidden;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+nav a.left {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 600px 0 30px;
     text-decoration: none;
-    color: #ffffff;
     font-weight: bold;
 }
 
-a:hover {
+nav a.right{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a.right:hover {
+    background-color: #141a8e;
     color: #30bdff;
+}
+
+ul li a.active {
+  background-color: #877eff;
 }
 
 main {
     padding: 0px 20px 50px 20px;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
 }
 
 section {
@@ -54,9 +121,10 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 15px auto;
     border-radius: 30px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
 
-section:hover {
+section:hover, .send:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -74,38 +142,44 @@ footer {
 
 /*For Home Page Designs*/
 .img-profile {
-     border-radius: 50%;
-     padding: 5px;
-     box-shadow: 0 0 20px rgba(88, 247, 255, 0.5);
+    border-radius: 50%;
+    border: 5px solid white;
 }
 
 .home-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.home-intro {
+    display: flex;
+    flex-direction: row;
 }
 
 .profile {
+    margin: 50px 10px 50px 300px;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    border-radius: 20%;
-    width: 18%;
+    border-radius: 50%;
 }
 
 
 .motto {
-    margin-bottom: 50px;
+    margin: 80px 20px 80px 10px;
+    font-size: 20px;
     background: linear-gradient(45deg, rgb(168, 230, 255), rgb(242, 249, 255) );
-    width: 40%;
+    width: 35%;
     text-align: center;
     padding: 12px;
-    background-color: rgb(159, 210, 255);
     border: 2px solid rgb(15, 127, 187);
-    border-radius: 0 50% 50% 50%;
+    border-radius: 30% 30% 30% 3%;
+}
+
+.motto h5 span {
+    font-size: 19px;    
+    color: #000d84;
+    font-weight: bold;
 }
 
 .biography, .facts {
@@ -285,9 +359,261 @@ footer {
         width: 68%;
     }
 }
+
+
+/*For Lesson Gallery Page Designs*/
+div.lessons {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 5px auto;
+    background: linear-gradient(180deg, rgb(70, 224, 255), #9a9dfd, rgb(98, 164, 255));
+}
+
+div.lessons:hover{
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+section.layout {
+    background: linear-gradient(45deg, rgb(168, 230, 255), rgb(242, 249, 255) );
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px 50px 20px 50px;
+    margin: 40px 50px 100px 50px;
+    border-radius: 30px;
+    border: 2px solid #01106b;
+}
+
+/*For sidebar menu. Tutorial used: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #01106b, rgb(42, 103, 173));
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a, .source {
+  padding: 8px 15px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover, .source:hover {
+  color: #02ddff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 30px;
+  margin-left: 100px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  z-index: 2;
+  position: sticky;
+  top: 10px;
+  left: 1250px;
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-weight: bold;
+}
+
+.openbtn:hover, .send:hover {
+ color: #30bdff;
+ transition: 0.5s;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 10px;
+}
+
+
+/*Dropdown Menu inside Sidebar. Tutorial used: https://www.w3schools.com/howto/howto_css_dropdown.asp*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #01106b;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*For Contact Me Page Designs*/
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px 25px 10px;
+    margin: 10px auto;
+    width: 80%;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px 25px 10px;
+    margin: 5px auto;
+    width: 80%;
+    border: 2px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, textarea {
+    background: linear-gradient(45deg, rgb(203, 239, 253), rgb(242, 249, 255) );
+    height: 30px;
+    width: 300px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding: 5px;
+}
+
+input:hover, textarea:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nameAlert, .emailAlert, .messageAlert {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0px 5px 0px;
+}
+
+.send {
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+  color: white;
+  font-weight: bold;
+  margin: 10px auto;
+}
+
+.icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    font-size: 30px;
+    margin-top: 15px;
+    color: #01106b;
+    transition: 0.5s;
+}
+
+.icons i:hover {
+    color: #00e1ff;
+    transform: scale(1.20);
+}
+
+.contact-info ul, .contact-info li {
+  list-style-type: none;
+  margin: 0 80px 15px 0;
+  
+}
+
+
+
+
+
+/*For Mobile Screen Adjustability*/
 @media (max-width: 880px) {
+
+    .space-down {
+        margin-top: 170px;
+        margin-bottom: 80px; 
+    }
+
+    .home-intro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile, .motto {
+        margin: 20px;
+        width: fit-content;
+    }
+
     .home-grid {
         grid-template-columns: 1fr;
+    }
+
+    nav a.left, nav a.right {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
     .skill-grid {
@@ -297,6 +623,26 @@ footer {
             "soft" 
             "hobby";
     }
+
+    .layout {
+        margin: 20px 0px 80px 0px;
+        padding: 0px;
+    }
+
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar .closebtn {
+        top: 0;
+        right: 0x;
+    }
+
+    .sidebar a, .source {
+        font-size: 13px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
 }
-
-
