@@ -391,8 +391,8 @@ footer {
 .layout { /*Layout for each lesson parts*/
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px 30px 20px 30px;
-    margin: 40px 30px 100px 30px;
+    padding: 10px 30px 20px 30px auto;
+    margin: 40px 30px 100px 30px auto;
     border-radius: 30px;
     border: 2px solid #01106b;
 }
@@ -521,7 +521,7 @@ footer {
     align-items: center;
     padding: 0 10px 25px 10px;
     margin: 5px auto;
-    width: 60%;
+    width: 70%;
     border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     font-size: 14px;
@@ -534,7 +534,8 @@ input, textarea {
     border-radius: 10px;
     transition: 0.3s;
     padding: 10px;
-    width: 250px;
+    margin: 5px auto;
+    width: 100%;
 }
 
 input:hover, textarea:hover{
@@ -656,3 +657,4 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
+
