@@ -77,6 +77,22 @@ ul li a.active { /*So user knows which page they are on*/
   background-color: #877eff;
 }
 
+.dark-button {
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.dark-button:hover {
+ color: #30bdff;
+ transform: scale(1.05);
+}
+
 section {
     background: linear-gradient(45deg, rgba(88, 247, 255, 0.557), rgba(198, 166, 254, 0.616));
     transition: transform 0.3s ease, box-shadow 0.3s ease; /*for smooth hover transition*/
@@ -640,5 +656,3 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
-
-
