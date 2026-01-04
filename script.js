@@ -66,7 +66,10 @@ function DarkMode() {
     const sections = document.querySelectorAll("section");
     const header = document.querySelector("header");
     const allElements = document.querySelectorAll("*");
+    const button = document.querySelector("button");
    
+
+    button.classList.toggle("dark-nav-footer");
     body.classList.toggle("dark-body");
     nav.classList.toggle("dark-nav-footer");
     footer.classList.toggle("dark-nav-footer");
