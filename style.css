@@ -1,38 +1,4 @@
-/*For All Pages Designs*/
-
-.animate {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.dark-body {
-    background-image: url('images/blackbg.png');
-}
-
-.dark-nav-footer {
-    background: linear-gradient(180deg, #000000, #434343);
-}
-
-.dark-section {
-    background: linear-gradient(45deg, rgba(24, 24, 24, 0.8), rgba(80, 80, 80, 0.8));
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.349);
-    color: #ffffff;
-    background-color: #181818;
-}
-
-.light-text {
-    color: #ffffff;
-}
+/*FOR ALL PAGE DESIGN*/
 
 body {
     font-family: Verdana, Tahoma, sans-serif;
@@ -45,7 +11,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.space-down {
+.space-down { /*So that the navigation and footer doesn't end up covering the main contents*/
     margin-top: 45px;
     margin-bottom: 80px; 
 }
@@ -64,9 +30,9 @@ h2 {
     color: #01106b;
 }
 
-/*Navigation Bar Responsive. Tutorial used: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
+/*Responsive and Mobile-Friendly Navigation Bar. Tutorial used: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp*/
 nav {
-    z-index: 1; /*To ensure the navbar is on top of other content */
+    z-index: 1; /*To ensure the navigation bar is on top of other content */
     position: fixed;
     transition: top 0.3s;
     top: 0; 
@@ -75,7 +41,7 @@ nav {
 }
 
 nav ul {
-  overflow: hidden;
+  overflow: hidden; /*So that the list items stay within the navigation bar */
   list-style-type: none;
   width: 100%;
   margin: 0;
@@ -85,7 +51,7 @@ nav ul {
   flex-direction: row;
 }
 
-nav a.left {
+nav a.left { /*Portfolio. on the left*/
     display: block;
     color: white;
     text-align: center;
@@ -94,7 +60,7 @@ nav a.left {
     font-weight: bold;
 }
 
-nav a.right{
+nav a.right{ /*Home, Skills, Lessons, Contact Me on the right*/
     display: block;
     color: white;
     text-align: center;
@@ -107,24 +73,19 @@ nav a.right:hover {
     color: #30bdff;
 }
 
-ul li a.active {
+ul li a.active { /*So user knows which page they are on*/
   background-color: #877eff;
-}
-
-main {
-    padding: 0px 20px 50px 20px;
-    margin: 0 0 50px 0;
 }
 
 section {
     background: linear-gradient(45deg, rgba(88, 247, 255, 0.557), rgba(198, 166, 254, 0.616));
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 15px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*for smooth hover transition*/
+    margin: 10px auto; /*auto so contents are centered*/
     border-radius: 30px;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
 
-section:hover, .send:hover {
+section:hover, .send:hover { /*send hover is in contacts page, but placed here so it's not redundant*/
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -140,46 +101,78 @@ footer {
     font-weight: bold;
 }
 
-/*For Home Page Designs*/
+/*For All Page Intro Animation*/
+.animate {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*For Dark Mode (Additional Feature XD)*/
+.dark-body {
+    background-image: url('images/blackbg.png');
+}
+
+.dark-nav-footer {
+    background: linear-gradient(180deg, #000000, #434343);
+}
+
+.dark-section {
+    background: linear-gradient(45deg, rgba(24, 24, 24, 0.785), rgba(80, 80, 80, 0.521));
+    box-shadow: inset 0 0 10px rgba(252, 253, 255, 0.669);
+    color: #ffffff;
+}
+
+.light-text {
+    color: #ffffff;
+}
+
+/*FOR HOME PAGE DESIGNS*/
 .img-profile {
     border-radius: 50%;
     border: 5px solid white;
 }
 
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.home-intro {
+.home-intro { /*To arrange profile picture and motto side by side*/
     display: flex;
     flex-direction: row;
-}
+} 
 
 .profile {
     margin: 50px 10px 50px 300px;
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    border-radius: 50%;
+    border-radius: 50%; /*For section around profile pic to be round too*/
 }
 
 
 .motto {
     margin: 80px 20px 80px 10px;
     font-size: 20px;
-    background: linear-gradient(45deg, rgb(168, 230, 255), rgb(242, 249, 255) );
     width: 35%;
     text-align: center;
     padding: 12px;
-    border: 2px solid rgb(15, 127, 187);
-    border-radius: 30% 30% 30% 3%;
+    border: 2px solid #86d5ff;
+    border-radius: 30% 30% 30% 3%; /*For a bubble chat shape*/
 }
 
 .motto h5 span {
     font-size: 19px;    
-    color: #000d84;
+    color: #253bff;
     font-weight: bold;
+}
+
+.home-grid { /*To arrange biography and facts side by side*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .biography, .facts {
@@ -205,11 +198,11 @@ footer {
 
 
 
-/*For Skills Page Designs*/
+/*FOR SKILLS PAGE DESIGN*/
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "tech soft" "hobby hobby";
+    grid-template-areas: "tech soft" "hobby hobby"; /*Learned to use grid and flex on the Mimo app I used to learn HTML,CSS, and JS during suummer break*/
 }
 
 .tech {
@@ -230,7 +223,7 @@ footer {
     grid-area: soft;
 }
 
-.softie {
+.soft-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,10 +231,10 @@ footer {
     text-align: center;
 }
 
-.softie span {
+.soft-content span {
     font-size: 30px;    
     background: linear-gradient(45deg, rgb(70, 224, 255), #8286ff, rgb(46, 133, 255));
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /*got this webkit and bg clip online, so that the star emojis can change colors to match my color theme*/
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -257,20 +250,21 @@ footer {
 
 .hobby li {
     font-size: 18px;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
-/*For Bar and Bar Animations in Skills. Tutorial I used: https://foolishdeveloper.com/animated-skills-bar-html-css-for-beginners/*/
+/*For Bar and Bar Animations in Tech Skills. Tutorial I used: https://foolishdeveloper.com/animated-skills-bar-html-css-for-beginners/*/
 
-.details{
+.details { /*contains the words like HTML and percentage numbers*/
     width: 95%;
     display: flex;  
     justify-content: space-between;
     margin: 10px;
     font-weight: bold;
-    
 }
+
+/*Bar Designs*/
 
 .bar{
     position: relative;
@@ -288,6 +282,7 @@ footer {
     background: linear-gradient(45deg, rgba(101, 229, 255, 0.881), #a9acffe1, rgb(86, 156, 255));
 }
 
+/*Bar Animations*/
 
 #html-bar{
     animation: html-fill 3s forwards;
@@ -361,8 +356,8 @@ footer {
 }
 
 
-/*For Lesson Gallery Page Designs*/
-div.lessons {
+/*FOR LESSON GALLERY PAGE*/
+.lessons { /*Is like the title header for each lessons*/
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     padding: 10px;
@@ -370,19 +365,18 @@ div.lessons {
     border: 2px solid white;
     border-radius: 20px;
     margin: 5px auto;
-    background: linear-gradient(180deg, rgb(70, 224, 255), #9a9dfd, rgb(98, 164, 255));
 }
 
-div.lessons:hover{
+.lessons:hover{
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-section.layout {
-    background: linear-gradient(45deg, rgb(168, 230, 255), rgb(242, 249, 255) );
+.layout { /*Layout for each lesson parts*/
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 20px 50px 20px 50px;
-    margin: 40px 50px 100px 50px;
+    padding: 10px 30px 20px 30px;
+    margin: 40px 30px 100px 30px;
     border-radius: 30px;
     border: 2px solid #01106b;
 }
@@ -395,15 +389,15 @@ section.layout {
   z-index: 2; /* Stay on top */
   top: 0;
   left: 0;
-  background: linear-gradient(45deg, #01106b, rgb(42, 103, 173));
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  background: linear-gradient(180deg,  rgb(27, 82, 146), #01106b);
 }
 
 /* The sidebar links */
-.sidebar a, .source {
-  padding: 8px 15px 8px 32px;
+.sidebar a, .source { /*puuting source here too para design consistency and hindi redundant*/
+  padding: 8px 15px 8px 30px;
   text-decoration: none;
   font-size: 15px;
   color: #ffffff;
@@ -463,7 +457,7 @@ section.layout {
 .dropdown-content {
   display: none;
   position: absolute;
-  background: linear-gradient(180deg, #01106b, rgb(42, 103, 173));
+  background: linear-gradient(180deg,  #01106b, rgb(27, 82, 146));
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -488,7 +482,7 @@ section.layout {
 }
 
 
-/*For Contact Me Page Designs*/
+/*FOR CONTACT ME PAGE DESIGN*/
 .contacts-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -496,39 +490,35 @@ section.layout {
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 0 10px 25px 10px;
-    margin: 10px auto;
-    width: 80%;
+    margin: 5px auto;
+    width: 70%;
     border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     padding: 0 10px 25px 10px;
     margin: 5px auto;
-    width: 80%;
+    width: 60%;
     border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     font-size: 14px;
     font-weight: bold;
-    margin-top: 10px;
 }
 
 input, textarea {
     background: linear-gradient(45deg, rgb(203, 239, 253), rgb(242, 249, 255) );
-    height: 30px;
-    width: 300px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     transition: 0.3s;
-    padding: 5px;
+    padding: 10px;
+    width: 250px;
 }
 
 input:hover, textarea:hover{
@@ -597,13 +587,13 @@ input:hover, textarea:hover{
         height: 150px;
     }
 
+    .facts li, .hobby li {
+        margin-left: 2px;
+    }
+
     .profile, .motto {
         margin: 20px;
         width: fit-content;
-    }
-
-    .facts li {
-        margin-left: 2px;
     }
 
     .home-grid {
@@ -650,4 +640,5 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
+
 
