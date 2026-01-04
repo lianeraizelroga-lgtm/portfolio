@@ -636,8 +636,8 @@ input:hover, textarea:hover{
     }
 
     .layout {
-        margin: 20px 0px 80px 0px;
-        padding: 0px;
+        margin: 20px 5px 80px 5px;
+        padding: 5px;
     }
 
     .sidebar {
@@ -657,4 +657,5 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
+
 
