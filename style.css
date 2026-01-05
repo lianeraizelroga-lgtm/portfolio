@@ -524,8 +524,6 @@ footer {
     width: 70%;
     border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    font-size: 14px;
-    font-weight: bold;
 }
 
 input, textarea {
@@ -533,9 +531,9 @@ input, textarea {
     border: 1px solid #ffffff;
     border-radius: 10px;
     transition: 0.3s;
-    padding: 10px;
+    padding: 5px;
     margin: 5px auto;
-    width: 50%;
+    width: 100%;
 }
 
 input:hover, textarea:hover{
@@ -579,9 +577,6 @@ input:hover, textarea:hover{
   margin: 0 80px 15px 0;
   
 }
-
-
-
 
 
 /*For Mobile Screen Adjustability*/
@@ -656,6 +651,7 @@ input:hover, textarea:hover{
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
