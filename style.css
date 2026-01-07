@@ -383,7 +383,12 @@ footer {
     margin: 5px auto;
 }
 
-.lessons:hover{
+.highlight {
+    color: #253bff;
+    font-weight: bold;
+}
+
+.lessons:hover, .highlight:hover{
     transform: scale(1.02);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -391,10 +396,15 @@ footer {
 .layout { /*Layout for each lesson parts*/
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 10px 30px 20px 30px auto;
-    margin: 40px 30px 100px 30px auto;
+    padding: 10px 30px 20px 30px;
+    margin: 40px 30px 100px 30px;
     border-radius: 30px;
     border: 2px solid #01106b;
+}
+
+.center-image {
+    margin: auto;
+    width: 50%;
 }
 
 /*For sidebar menu. Tutorial used: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp */
@@ -499,41 +509,29 @@ footer {
 
 
 /*FOR CONTACT ME PAGE DESIGN*/
-.contacts-grid {
+.contacts-grid { /*To arrange info and form side by side*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.contact-info, .contact-form {
+    text-align: center;
     padding: 0 10px 25px 10px;
-    margin: 5px auto;
-    width: 70%;
+    width: 60%;
     border: 2px solid white;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 10px 25px 10px;
-    margin: 5px auto;
-    width: 70%;
-    border: 2px solid white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
 
 input, textarea {
     background: linear-gradient(45deg, rgb(203, 239, 253), rgb(242, 249, 255) );
     border: 1px solid #ffffff;
     border-radius: 10px;
     transition: 0.3s;
-    padding: 5px;
-    margin: 5px auto;
-    width: 100%;
+    padding: 10px;
+    width: 80%;
+    margin: 10px auto;
 }
 
 input:hover, textarea:hover{
@@ -548,6 +546,17 @@ input:hover, textarea:hover{
     margin: 5px 0px 5px 0px;
 }
 
+.contact-form label {
+    font-weight: bold;
+    margin-right: 150px;
+}
+
+.contact-info p{
+    text-align: justify;
+    margin: 20px;
+}
+
+
 .send {
   border-radius: 20px;
   font-size: 20px;
@@ -559,9 +568,7 @@ input:hover, textarea:hover{
 }
 
 .icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
+    margin-top: 100px;
     font-size: 30px;
     color: #01106b;
     transition: 0.5s;
@@ -572,12 +579,14 @@ input:hover, textarea:hover{
     transform: scale(1.20);
 }
 
-.contact-info ul, .contact-info li {
+.contact-info li {
+  text-align: center;
   list-style-type: none;
-  margin: 0 80px 15px 0;
+  padding-right: 50px;
+  margin: 10px auto;
+  font-size: 17px;
   
 }
-
 
 /*For Mobile Screen Adjustability*/
 @media (max-width: 880px) {
@@ -657,6 +666,7 @@ input:hover, textarea:hover{
         width: 70%;
     }
 }
+
 
 
 
