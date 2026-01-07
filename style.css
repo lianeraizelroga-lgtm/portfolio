@@ -650,7 +650,14 @@ input:hover, textarea:hover{
     .contacts-grid {
         grid-template-columns: 1fr;
     }
+
+    .contact-info, .contact-form {
+        margin: 5px auto;
+        padding: 5px;
+        width: 70%;
+    }
 }
+
 
 
 
