@@ -643,6 +643,10 @@ input:hover, textarea:hover{
         padding: 5px;
     }
 
+    .center-image img {
+        width: 100%;
+    }
+
     .sidebar {
         padding-top: 15px;
     }
@@ -666,6 +670,7 @@ input:hover, textarea:hover{
         width: 70%;
     }
 }
+
 
 
 
