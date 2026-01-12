@@ -13,12 +13,10 @@ window.onscroll = function() {
 /*For Sidebar Navigation, can be closed and open for lesson gallergy. Tutorial used: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp*/
 function openNav() {
     document.getElementById("mySidebar").style.width = "150px";
-    document.getElementById("main").style.marginLeft = "100px";
 }
 
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
 }
 
 /*For Form Validation. Tutorial: galing sa video ni sir Erwin*/
