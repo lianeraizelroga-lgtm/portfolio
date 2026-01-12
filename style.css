@@ -661,6 +661,10 @@ input:hover, textarea:hover{
         font-size: 13px;
     }
 
+    .dropdown {
+        padding-top: 35px;
+    }
+
     .contacts-grid {
         grid-template-columns: 1fr;
     }
@@ -671,6 +675,7 @@ input:hover, textarea:hover{
         width: 70%;
     }
 }
+
 
 
 
