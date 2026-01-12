@@ -477,6 +477,7 @@ footer {
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-bottom: 10px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -675,6 +676,7 @@ input:hover, textarea:hover{
         width: 70%;
     }
 }
+
 
 
 
