@@ -404,7 +404,11 @@ footer {
 
 .center-image {
     margin: auto;
-    width: 50%;
+    width: 70%;
+}
+
+.center-image img {
+    width: 100%;
 }
 
 /*For sidebar menu. Tutorial used: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp */
@@ -423,7 +427,7 @@ footer {
 
 /* The sidebar links */
 .sidebar a, .source { /*puuting source here too para design consistency and hindi redundant*/
-  padding: 8px 15px 8px 30px;
+  padding: 15px 15px 8px 30px;
   text-decoration: none;
   font-size: 15px;
   color: #ffffff;
@@ -477,7 +481,7 @@ footer {
 .dropdown {
   position: relative;
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -676,6 +680,7 @@ input:hover, textarea:hover{
         width: 70%;
     }
 }
+
 
 
 
